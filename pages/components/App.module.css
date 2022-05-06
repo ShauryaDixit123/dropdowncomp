@@ -1,0 +1,25 @@
+.dropDown {
+  transform: translatex(100%) scale(0);
+}
+.dropDown:hover {
+  transform: translatex(101%) scale(1);
+}
+.dropDownImg {
+  transform: rotate(-90deg);
+}
+.dropDownImg:hover {
+  transform: rotate(-270deg);
+}
+
+.group:hover .group-hover\:scale-100 {
+  transform: scale(1);
+}
+.group:hover .group-hover\:-rotate-180 {
+  transform: rotate(180deg);
+}
+.scale0 {
+  transform: scale(0);
+}
+.minW32 {
+  min-width: 8rem;
+}
