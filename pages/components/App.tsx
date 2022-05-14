@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import DropDown from "./DropDown";
+import SubDropDownItems from "./SubDropDownItems";
 import styles from "./App.module.css";
 function App() {
   return (
@@ -34,54 +36,15 @@ function App() {
           <li className="rounded-sm px-3 py-1 hover:bg-gray-100">
             Job Management
           </li>
-
-          <li className="rounded-sm relative px-3 py-1 hover:bg-gray-100">
-            <button className="w-full text-left flex items-center outline-none focus:outline-none">
-              <span className="pr-1 flex-1 ">Access Control</span>
-              <span className="mr-auto">
-                <svg
-                  className={`fill-current h-4 w-4
-            transition duration-150 ease-in-out `}
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                </svg>
-              </span>
-            </button>
-            <ul
-              className={`bg-white border rounded-sm absolute top-0 right-0 
-  transition duration-150 ease-in-out origin-top-left
-   `}
-            >
-              <li className="px-3 py-1 hover:bg-gray-100">Configure Group</li>
-              <li className="px-3 py-1 hover:bg-gray-100">Configure User</li>
-            </ul>
-          </li>
-          <li className="rounded-sm relative px-3 py-1 hover:bg-gray-100">
-            <button className="w-full text-left flex items-center outline-none focus:outline-none">
-              <span className="pr-1 flex-1">Bulk RFQ</span>
-              <span className="mr-auto">
-                <svg
-                  className="fill-current h-4 w-4
-            transition duration-150 ease-in-out"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                </svg>
-              </span>
-            </button>
-            <ul
-              className={`bg-white border rounded-sm absolute top-0 right-0 
-  transition duration-150 ease-in-out origin-top-left
-  ${styles.minW32}`}
-            >
-              <li className="px-3 py-1 hover:bg-gray-100">Manange RFQ</li>
-              <li className="px-3 py-1 hover:bg-gray-100">Add RFQ Buy Rate</li>
-              <li className="px-3 py-1 hover:bg-gray-100">Add RFQ Sell Rate</li>
-            </ul>
-          </li>
+          <DropDown name="Access Control">
+            <SubDropDownItems name="Configure Group" />
+            <SubDropDownItems name="Configure User" />
+          </DropDown>
+          <DropDown name="Bulk RFQ">
+            <SubDropDownItems name="Manage RFQ" />
+            <SubDropDownItems name="Add RFQ Buy Rate" />
+            <SubDropDownItems name="Add RFQ Sell Rate" />
+          </DropDown>
         </ul>
       </div>
     </div>

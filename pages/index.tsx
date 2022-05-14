@@ -1,11 +1,14 @@
 import type { NextPage } from "next";
-import App from "./components/App";
-import styles from "../styles/Home.module.css";
+import DropDownFinal from "./components/DropDownFinal";
 
 const Home: NextPage = () => {
   return (
-    <div className={styles.container}>
-      <App />
+    <div id="dropDown" className="h-15 w-38 flex justify-around">
+      {/* <App /> */}
+
+      {/* <MyDropdown onHover={true} /> */}
+      {/* <TailwindCmpLeft /> */}
+      <DropDownFinal />
     </div>
   );
 };
